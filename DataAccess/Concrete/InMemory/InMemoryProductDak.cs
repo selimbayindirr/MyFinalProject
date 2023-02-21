@@ -53,6 +53,8 @@ namespace DataAccess.Concrete.InMemory
         }
         public List<Product> GetAllByCategory(int categoryId)
         {
+            Product productToDelete = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
+            //
             throw new NotImplementedException();
         }
 
