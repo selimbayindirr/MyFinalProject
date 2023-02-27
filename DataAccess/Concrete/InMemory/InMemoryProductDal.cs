@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class InMemoryProductDak : IProductDal
+    public class InMemoryProductDal : IProductDal
     {
         List<Product> _products;
 
-        public InMemoryProductDak()
+        public InMemoryProductDal()
         {
             _products = new List<Product>
             {
@@ -53,7 +53,7 @@ namespace DataAccess.Concrete.InMemory
         }
         public List<Product> GetAllByCategory(int categoryId)
         {
-            Product productToDelete = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
+            //Product productToDelete = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
             //
             throw new NotImplementedException();
         }

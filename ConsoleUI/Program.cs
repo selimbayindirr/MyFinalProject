@@ -1,4 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Business.Concrete;
+using DataAccess.Concrete.InMemory;
 
-
+InMemoryProductManager manager= new InMemoryProductManager(new InMemoryProductDal());
+foreach (var item in manager.getproducts())
+{
+    Console.WriteLine(item.ProductName);
+}
