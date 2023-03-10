@@ -12,7 +12,16 @@ namespace Entities.Concrete
         public Product()
         {
         }
-
+        public Product(string productName)
+        {
+        }
+        public Product(int categoryId, string productName, short unitsInStock, decimal unitPrice)
+        {
+            CategoryId = categoryId;
+            ProductName = productName;
+            UnitsInStock = unitsInStock;
+            UnitPrice = unitPrice;
+        }
         public Product(int productId, int categoryId, string productName, short unitsInStock, decimal unitPrice)
         {
             ProductId = productId;

@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Core.Utilities.Results.Abstract;
+
+namespace Core.Utilities.Results.Abstract
+{
+    public class DataResult<T> : Result, IDataResult<T>
+    {
+        public DataResult(T data,bool issuccess,string message):base (issuccess,message)
+        {
+            Data= data;
+        }
+        public DataResult(T data,bool issuccess):base(issuccess)
+        {
+            Data=data;
+        }
+
+        public T Data { get; }
+    }
+}
