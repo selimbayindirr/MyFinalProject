@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         public List<Product> GetAllProducts()
         {
          //   IProductService productService = new ProductManager(new EfProductDal());
-            var result = productService.getproducts();
+            var result = _productService.getproducts();
 
             return result.Data;
         }
