@@ -18,8 +18,8 @@ namespace Business.DependecyResolvers
             //services.AddTransient
             // services.AddSingleton
 
-            //services.AddScoped<IProductService, ProductManager>(); 
-            //services.AddScoped<IProductDal, EfProductDal>();
+            services.AddScoped<IProductService, ProductManager>(); 
+            services.AddScoped<IProductDal, EfProductDal>();
 
             //Autofac Kullanımı 
 
