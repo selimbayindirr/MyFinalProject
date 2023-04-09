@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using Autofac;
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
@@ -18,13 +19,14 @@ namespace Business.DependecyResolvers
             //services.AddTransient
             // services.AddSingleton
 
-            services.AddScoped<IProductService, ProductManager>(); 
+            services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
 
             //Autofac Kullanımı 
 
 
+
+        }
        
         }
-    }
 }
